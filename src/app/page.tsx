@@ -36,6 +36,7 @@ export default function home (){
        <Hero2/>
        <LogoSection/>
        <LatestBlogs/>
+       <Pa
         {/* <About/> */}
         {/* <FeaturesSection/> */}
         {/* <ClientSection/> */}
