@@ -1,3 +1,4 @@
+"use client"
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
@@ -109,7 +110,7 @@ export default function Header1() {
             </div>
 
             {/* Links */}
-            <Link href="src/app/login" className="hover:underline">
+            <Link href="\login" className="hover:underline">
               Login
             </Link>
             <span className="hover:underline cursor-pointer">Wishlist ♡</span>

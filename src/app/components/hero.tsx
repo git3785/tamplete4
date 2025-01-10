@@ -1,28 +1,29 @@
 "use client";
-
 import React, { useState } from "react";
+import Image from "next/image"; // Importing Image from next/image
 
 const HeroSection = () => {
   const slides = [
     {
       id: 1,
-      image: "/hero/hero1.png", // Replace with your image path
-      title: "New Furniture Collection  Trends in 2020",
+      image: "/hero/hero1.png",
+      title: "New Furniture Collection Trends in 2020",
       subtitle: "Best Furniture For Your Castle...",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
       buttonText: "Shop Now",
+      url: "/shop-list", 
     },
     {
       id: 2,
-      image: "/latestproduct/lp1.png", // Replace with your image path
+      image: "/latestproduct/lp1.png",
       title: "Discover Modern Lighting",
       subtitle: "Illuminate Your Space",
       description:
         "Explore a variety of stylish lighting solutions for every room in your home.",
       buttonText: "Explore Now",
+      url: "/gird", 
     },
-    // Add more slides if needed
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -56,7 +57,7 @@ const HeroSection = () => {
               }`}
             >
               {/* Text Content */}
-              <div className="order-2 md:order-1 text-center md:text-left px-4">
+              <div className="text-center md:text-left px-4 order-1 md:order-1">
                 <p className="text-pink-500 text-lg md:text-xl uppercase font-semibold">
                   {slide.subtitle}
                 </p>
@@ -66,17 +67,21 @@ const HeroSection = () => {
                 <p className="text-gray-600 text-lg md:text-xl my-6">
                   {slide.description}
                 </p>
-                <button className="bg-pink-500 text-white px-8 py-3 rounded-md shadow-lg hover:bg-pink-600 transition duration-300">
-                  {slide.buttonText}
-                </button>
+                <a href={slide.url}>
+                  <button className="bg-pink-500 text-white px-8 py-3 rounded-md shadow-lg hover:bg-pink-600 transition duration-300">
+                    {slide.buttonText}
+                  </button>
+                </a>
               </div>
 
               {/* Image Content */}
-              <div className="order-1 md:order-2 flex justify-center">
-                <img
+              <div className="flex justify-center order-2 md:order-2">
+                <Image
                   src={slide.image}
                   alt={slide.title}
                   className="rounded-lg w-full md:max-w-xl lg:max-w-2xl object-cover"
+                  width={500} // Add width for optimization
+                  height={500} // Add height for optimization
                 />
               </div>
             </div>

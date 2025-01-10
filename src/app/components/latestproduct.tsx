@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 
 const LatestProducts = () => {
   // Sample data for products
@@ -50,7 +50,9 @@ const LatestProducts = () => {
 
   return (
     <section className="py-12">
-      <h2 className="text-center  text-blue-950  text-3xl font-bold mb-6">Latest Products</h2>
+      <h2 className="text-center text-blue-950 text-4xl font-bold mb-6">
+        Latest Products
+      </h2>
 
       {/* Category Navigation */}
       <div className="flex justify-center space-x-8 mb-10">
@@ -84,18 +86,23 @@ const LatestProducts = () => {
               width: "370px",
             }}
           >
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full object-contain"
+            <div
+              className="relative w-full"
               style={{
-                maxHeight: "250px",
+                height: "250px", // Matches your maxHeight
               }}
-            />
+            >
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                className="object-contain"
+              />
+            </div>
             <div className="p-4 flex justify-between items-center space-x-4">
               <h3 className="text-base font-semibold">{product.name}</h3>
               <div className="flex space-x-2 items-center">
-                <p className="text-blue-500 ">{product.price}</p>
+                <p className="text-blue-500">{product.price}</p>
                 <p className="text-red-500 line-through">{product.originalPrice}</p>
               </div>
             </div>
@@ -103,7 +110,7 @@ const LatestProducts = () => {
         ))}
       </div>
     </section>
-
   );
 };
+
 export default LatestProducts;

@@ -4,7 +4,7 @@ import Link from "next/link";
 const LatestBlogs = () => {
   return (
     <div className="py-12 px-5 md:px-20">
-      <h1 className="text-4xl font-bold text-center mb-8">Latest Blogs</h1>
+      <h1 className="text-4xl font-bold text-center text-blue-950 mb-8">Latest Blogs</h1>
 
       {/* Grid for Blogs */}
       <div className="flex flex-wrap justify-center gap-[30px]">

@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image"; // Import Image from next/image
 
 const FeaturedProducts = () => {
   const products = [
@@ -34,7 +34,7 @@ const FeaturedProducts = () => {
 
   return (
     <section className="py-12">
-      <h2 className="text-center text-2xl md:text-3xl font-bold mb-8 text-blue-950">
+      <h2 className="text-center text-5xl md:text-3xl font-bold mb-8 text-blue-950">
         Featured Products
       </h2>
       <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -45,10 +45,13 @@ const FeaturedProducts = () => {
           >
             {/* Product Image */}
             <div className="relative w-full pb-[100%]"> {/* Adjust to maintain aspect ratio */}
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
                 className="absolute top-0 left-0 w-full h-full object-contain" // Use 'object-contain' to prevent cropping
+                width={500} // Define width
+                height={500} // Define height
+                priority // Optional: Load the images faster if needed
               />
               <div className="absolute inset-0 flex justify-center items-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-25">
                 <button className="bg-green-500 text-white px-4 py-2 rounded-lg">

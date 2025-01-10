@@ -52,7 +52,7 @@ const Footer = () => {
 
         {/* Customer Care */}
         <div>
-          <h3 className="text-lg font-bold mb-4">Customer Care</h3>
+          <h3 className="text-lg font-bold mb-4 text-blue-950 ">Customer Care</h3>
           <ul className="space-y-2 text-gray-500 text-sm">
             {[
               { name: "My Account", href: "/account" },

@@ -30,7 +30,7 @@ const TopCategories = () => {
 
   return (
     <div className="py-16 px-4 md:px-8 bg-">
-      <h2 className="text-center text-2xl md:text-3xl font-bold text-blue-900 mb-8">
+      <h2 className="text-center text-5xl md:text-3xl font-bold text-blue-950 mb-8">
         Top Categories
       </h2>
       <div className="flex flex-wrap justify-center gap-8">

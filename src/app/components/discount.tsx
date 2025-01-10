@@ -4,7 +4,7 @@ import Link from "next/link";
 const DiscountItemPage = () => {
   return (
     <section className="py-12">
-      <h2 className="text-center text-blue-950 text-3xl font-bold mb-6">Discount Item</h2>
+      <h2 className="text-center text-blue-950 text-4xl font-bold mb-6">Discount Item</h2>
 
       {/* Category Navigation */}
       <div className="flex justify-center space-x-4 md:space-x-6 mb-6">

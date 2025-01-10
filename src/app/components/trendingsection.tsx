@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link"; // Import Link from Next.js
 
 const TrendingSection = () => {
   return (
     <section className="py-10 px-4 bg-white">
       {/* Section Title */}
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold text-blue-900">Trending Products</h2>
+        <h2 className="text-4xl font-bold text-blue-950">Trending Products</h2>
       </div>
 
       <div className="flex justify-center mb-10">
@@ -18,7 +19,7 @@ const TrendingSection = () => {
           ].map((imageSrc, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-4 rounded-lg shadow-md text-center"
+              className="bg-gray-50 p-4 rounded-lg shadow-md text-center transform hover:scale-105 transition-all duration-300 ease-in-out"
             >
               <div
                 className="relative mx-auto"
@@ -47,96 +48,100 @@ const TrendingSection = () => {
       </div>
 
       <div className="flex flex-col md:flex-row justify-center gap-6 mx-auto">
-  {/* First Promo Section */}
-  <div
-    className="flex items-center justify-center bg-pink-50 p-6 rounded-lg"
-    style={{
-      width: '420px',
-      height: '270px',
-      opacity: '1',
-    }}
-  >
-    <div className="space-y-3 -mt-2 text-center">
-      <h3 className="text-lg font-bold text-blue-900 whitespace-nowrap">
-        23% off in all products
-      </h3>
-      <a
-        href="#"
-        className="text-pink-600 font-semibold hover:underline block break-words"
-      >
-        Shop Now
-      </a>
-    </div>
-    <Image
-      src="/trendingsection/ts6.png"
-      alt="Promo Product"
-      width={213}
-      height={207}
-      className="ml-auto object-contain"
-    />
-  </div>
-
-  {/* Second Promo Section */}
-  <div
-    className="flex items-center justify-center bg-blue-50 p-6 rounded-lg"
-    style={{
-      width: '420px',
-      height: '270px',
-      opacity: '1',
-      overflow: 'hidden',
-    }}
-  >
-    <div className="space-y-3 text-center">
-      <h3 className="text-lg font-bold top-0 text-blue-900 whitespace-nowrap">
-        23% off in all products
-      </h3>
-      <a
-        href="#"
-        className="text-pink-600 font-semibold hover:underline block break-words"
-        style={{
-          maxWidth: '269px',
-        }}
-      >
-        View Collection
-      </a>
-    </div>
-
-    <div>
-      <Image
-        src="/trendingsection/ts5.png"
-        alt="Promo Collection"
-        width={380}
-        height={173}
-        className="object-contain"
-      />
-    </div>
-  </div>
-
-  {/* Executive Chairs List */}
-  <div className="bg-white p-4 rounded-lg w-full sm:w-auto">
-    <ul className="space-y-4">
-      {[ 
-        { imgSrc: "/trendingsection/ts7.png", price: "$32.00", url: "/product/chair-1" },
-        { imgSrc: "/trendingsection/ts8.png", price: "$35.00", url: "/product/chair-2" },
-        { imgSrc: "/trendingsection/ts9.png", price: "$40.00", url: "/product/chair-3" },
-      ].map(({ imgSrc, price, url }, index) => (
-        <li key={index} className="flex items-center space-x-4 justify-center">
-          <Image
-            src={imgSrc}
-            alt="Executive Chair"
-            width={50}
-            height={50}
-            className="rounded-md object-contain"
-          />
-          <div>
-            <p className="text-blue-950 font-semibold">Executive Seat Chair</p>
-            <p className="text-blue-950 font-semibold">{price}</p>
+        {/* First Promo Section */}
+        <div
+          className="flex items-center justify-center bg-pink-50 p-6 rounded-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+          style={{
+            width: '420px',
+            height: '270px',
+            opacity: '1',
+          }}
+        >
+          <div className="space-y-3 -mt-2 text-center">
+            <h3 className="text-lg font-bold text-blue-900 whitespace-nowrap">
+              23% off in all products
+            </h3>
+            <a
+              href="#"
+              className="text-pink-600 font-semibold hover:underline block break-words"
+            >
+              Shop Now
+            </a>
           </div>
-        </li>
-      ))}
-    </ul>
-  </div>
-</div>
+          <Image
+            src="/trendingsection/ts6.png"
+            alt="Promo Product"
+            width={213}
+            height={207}
+            className="ml-auto object-contain"
+          />
+        </div>
+
+        {/* Second Promo Section */}
+        <div
+          className="flex items-center justify-center bg-blue-50 p-6 rounded-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+          style={{
+            width: '420px',
+            height: '270px',
+            opacity: '1',
+            overflow: 'hidden',
+          }}
+        >
+          <div className="space-y-3 text-center">
+            <h3 className="text-lg font-bold top-0 text-blue-900 whitespace-nowrap">
+              23% off in all products
+            </h3>
+            <a
+              href="#"
+              className="text-pink-600 font-semibold hover:underline block break-words"
+              style={{
+                maxWidth: '269px',
+              }}
+            >
+              View Collection
+            </a>
+          </div>
+
+          <div>
+            <Image
+              src="/trendingsection/ts5.png"
+              alt="Promo Collection"
+              width={380}
+              height={173}
+              className="object-contain"
+            />
+          </div>
+        </div>
+
+        {/* Executive Chairs List */}
+        <div className="bg-white p-4 rounded-lg w-full sm:w-auto">
+          <ul className="space-y-4">
+            {[ 
+              { imgSrc: "/trendingsection/ts7.png", price: "$32.00", url: "/product/chair-1" },
+              { imgSrc: "/trendingsection/ts8.png", price: "$35.00", url: "/product/chair-2" },
+              { imgSrc: "/trendingsection/ts9.png", price: "$40.00", url: "/product/chair-3" },
+            ].map(({ imgSrc, price, url }, index) => (
+              <li key={index} className="flex items-center space-x-4 justify-center transform hover:scale-105 transition-all duration-300 ease-in-out">
+                <Image
+                  src={imgSrc}
+                  alt="Executive Chair"
+                  width={50}
+                  height={50}
+                  className="rounded-md object-contain"
+                />
+                <div>
+                  <p className="text-blue-950 font-semibold">Executive Seat Chair</p>
+                  <p className="text-blue-950 font-semibold">{price}</p>
+                </div>
+                {/* Remove the <a> tag and pass href directly to the Link component */}
+                <Link href={url} className="text-blue-600 hover:underline">
+                  View Product
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </section>
   );
 };
